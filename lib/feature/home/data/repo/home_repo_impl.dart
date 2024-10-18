@@ -16,7 +16,7 @@ class HomeRepoImpl implements HomeRepo {
     try {
       var data = await apiServices.get(
           endPoint:
-              "3/discover/movie?include_adult=true&include_video=true&language=en-US&page=1&sort_by=popularity.des&api_key=d83bd16d8c423e29aaeeea05a0cf2dde");
+              "3/discover/movie?include_adult=false&include_video=true&language=en-US&page=1&sort_by=popularity.des&api_key=d83bd16d8c423e29aaeeea05a0cf2dde");
       List<Results> movies = [];
       for (var i in data["results"]) {
         movies.add(Results.fromJson(i));
